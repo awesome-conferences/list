@@ -14,4 +14,6 @@ module.exports = {
       __key: "pages",
     },
   ],
+  pathPrefix: "/list",
+
 };
