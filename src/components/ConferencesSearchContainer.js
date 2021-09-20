@@ -1,32 +1,18 @@
 import React, { Component } from "react"
-import Axios from "axios"
 import * as JsSearch from "js-search"
-
+import conferences from "../../static/conferences.yaml"
 class Search extends Component {
   state = {
-    confList: [],
+    confList: conferences.conferences,
     search: [],
     searchResults: [],
     isLoading: true,
     isError: false,
     searchQuery: "",
   }
-  /**
-   * React lifecycle method to fetch the data
-   */
-  async componentDidMount() {
-    Axios.get("/conferences.json")
-      .then(result => {
-        const confData = result.data
-        this.setState({ confList: confData.conferences })
-        this.rebuildIndex()
-      })
-      .catch(err => {
-        this.setState({ isError: true })
-        console.log("====================================")
-        console.log(`Something bad happened while fetching the data\n${err}`)
-        console.log("====================================")
-      })
+
+  async componentDidMount(){
+    this.rebuildIndex()
   }
 
   /**
