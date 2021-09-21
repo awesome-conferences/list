@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as JsSearch from "js-search";
 import conferences from "../../static/conferences.yaml";
-import { Input, Form, Tag, Table, Layout } from 'antd';
+import { Input, Form, Tag, Table, Layout, Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 
 
@@ -119,9 +119,9 @@ class Search extends Component {
           <h1>Hi!</h1>
         </Header>
         <Content style={{padding: '0 50px'}}>
-        <div>
-        <div>
-          <Form onSubmit={this.handleSubmit}>
+          <Row>
+            <Col span={24}>
+            <Form onSubmit={this.handleSubmit}>
               <Input
                 id="Search:"
                 value={searchQuery}
@@ -130,7 +130,8 @@ class Search extends Component {
                 style={{ margin: "0 auto", width: "400px" }}
               />
           </Form>
-          <div>
+            </Col>
+            </Row>
             {/* <table>
               <thead>
                 <tr>
@@ -161,10 +162,9 @@ class Search extends Component {
                 })}
               </tbody>
             </table> */}
-            <Table columns={columns} dataSource={queryResults}/>
-          </div>
-        </div>
-      </div>
+            <Row>
+              <Col span={24}><Table columns={columns} dataSource={queryResults}/></Col>
+            </Row>
         </Content>
       </Layout>
     );
