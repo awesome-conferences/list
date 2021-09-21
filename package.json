@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "antd": "^4.16.13",
+    "currency-icons": "^1.0.14",
     "gatsby": "^3.13.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.14.0",

@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import * as JsSearch from "js-search";
-import conferences from "../../static/conferences.yaml";
-import { Input, Form, Tag, Table, Layout, Row, Col } from "antd";
+import { Col, Form, Input, Layout, Row, Table, Tag } from "antd";
 import "antd/dist/antd.css";
+import icons from "currency-icons";
+import * as JsSearch from "js-search";
+import React, { Component } from "react";
+import conferences from "../../static/conferences.yaml";
 
 const { Header, Content } = Layout;
 const randomColor = (string) => {
@@ -95,7 +96,9 @@ const columns = [
     title: "Price",
     dataIndex: "price",
     key: "price",
-    render: (text, record) => <span>{`${record.currency} ${text}`}</span>,
+    render: (text, record) => (
+      <span>{`${icons[record.currency].symbol}${record.price}`}</span>
+    ),
   },
   {
     title: "Format",
