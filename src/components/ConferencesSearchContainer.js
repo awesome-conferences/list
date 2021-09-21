@@ -54,12 +54,32 @@ const randomColor = (string) => {
   if (luminosity > 100) luminosity = 100;
   return `hsl(${hue},${Math.floor(saturation)}%,${luminosity}%)`;
 };
+
+const colors = Object.fromEntries(
+  new Map(
+    [...new Set(conferences.conferences.flatMap((item) => item.topics))].map(
+      (item) => [item, randomColor(item)]
+    )
+  )
+);
+
+const topics = [
+  ...new Set(conferences.conferences.flatMap((item) => item.topics)),
+];
+const formats = [
+  ...new Set(conferences.conferences.map((item) => item.format)),
+];
+
 const columns = [
   {
     title: "Name",
     dataIndex: "name",
     key: "name",
     render: (text, record) => <a href={record.url}>{text}</a>,
+    sorter: {
+      compare: (a, b) => new Intl.Collator().compare(a.name, b.name),
+      sortDirections: ["ascend", "descend"],
+    },
   },
   {
     title: "Start date",
@@ -81,6 +101,16 @@ const columns = [
     title: "Format",
     dataIndex: "format",
     key: "format",
+    filters: formats.map((it) => {
+      return { text: it, value: it };
+    }),
+    onFilter: (value, record) => {
+      return record.format === value;
+    },
+    sorter: {
+      compare: (a, b) => new Intl.Collator().compare(a.format, b.format),
+      sortDirections: ["ascend", "descend"],
+    },
   },
   {
     title: "CFP deadline",
@@ -103,16 +133,14 @@ const columns = [
         })}
       </>
     ),
+    filters: topics.map((it) => {
+      return { text: it, value: it };
+    }),
+    onFilter: (value, record) => {
+      return record.topics.indexOf(value) !== -1;
+    },
   },
 ];
-
-const colors = Object.fromEntries(
-  new Map(
-    [...new Set(conferences.conferences.flatMap((item) => item.topics))].map(
-      (item) => [item, randomColor(item)]
-    )
-  )
-);
 
 class Search extends Component {
   state = {
