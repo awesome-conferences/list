@@ -1,6 +1,67 @@
 import React, { Component } from "react";
 import * as JsSearch from "js-search";
 import conferences from "../../static/conferences.yaml";
+import { Input, Form, Tag, Table, Layout } from 'antd';
+import 'antd/dist/antd.css';
+
+
+const { Header, Content } = Layout;
+
+const columns = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+    render: (text, record)=>(
+      <a href={record.url}>{text}</a>
+    )
+  },
+  {
+    title: 'Start date',
+    dataIndex: 'date_start',
+    key: 'date_start',
+  },
+  {
+    title: 'End date',
+    dataIndex: 'date_end',
+    key: 'date_end',
+  },
+  {
+    title: 'Price',
+    dataIndex: 'price',
+    key: 'price',
+    render: (text, record)=>(
+      <span>{`${record.currency} ${text}`}</span>
+    )
+ },
+  {
+    title: 'Format',
+    dataIndex: 'format',
+    key: 'format',
+  },
+  {
+    title: 'CFP deadline',
+    dataIndex: 'cfp_deadline',
+    key: 'cfp_deadline',
+  },
+  {
+    title: 'Topics',
+    dataIndex: 'topics',
+    key: 'topics',
+    render: tags => (
+      <>
+        {tags.map(tag => {
+          let color = tag.length > 5 ? 'geekblue' : 'green';
+          return (
+            <Tag color={color} key={tag}>
+              {tag.toUpperCase()}
+            </Tag>
+          );
+        })}
+      </>
+    ),},
+]
+
 class Search extends Component {
   state = {
     confList: conferences.conferences,
@@ -53,24 +114,24 @@ class Search extends Component {
     const { confList, searchResults, searchQuery } = this.state;
     const queryResults = searchQuery === "" ? confList : searchResults;
     return (
-      <div>
+      <Layout className="layout">
+        <Header>
+          <h1>Hi!</h1>
+        </Header>
+        <Content style={{padding: '0 50px'}}>
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <div>
-              <label htmlFor="Search" style={{ paddingRight: "10px" }}>
-                Search:
-              </label>
-              <input
-                id="Search"
+        <div>
+          <Form onSubmit={this.handleSubmit}>
+              <Input
+                id="Search:"
                 value={searchQuery}
                 onChange={this.searchData}
-                placeholder=""
+                placeholder="Search"
                 style={{ margin: "0 auto", width: "400px" }}
               />
-            </div>
-          </form>
+          </Form>
           <div>
-            <table>
+            {/* <table>
               <thead>
                 <tr>
                   <th>Conference</th>
@@ -99,10 +160,13 @@ class Search extends Component {
                   );
                 })}
               </tbody>
-            </table>
+            </table> */}
+            <Table columns={columns} dataSource={queryResults}/>
           </div>
         </div>
       </div>
+        </Content>
+      </Layout>
     );
   }
 }
