@@ -52,7 +52,7 @@ const randomColor = (string) => {
     }
   }
   if (luminosity > 100) luminosity = 100;
-  return `hsl(${hue},${Math.floor(saturation)}%,${luminosity}%)`;
+  return `hsl(${hue},${saturation}%,${luminosity}%)`;
 };
 
 const colors = Object.fromEntries(
