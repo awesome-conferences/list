@@ -12,6 +12,17 @@ YAML syntax should be quite straightforward, but if uncertain — check [the doc
 
 We welcome any contributions if they follow our standards and generally — Kant’s cathegorical imperative. However, we do retain our veto rights.
 
+Start editing the site with:
+
+```
+git clone https://github.com/awesome-conferences/list.git
+cd list
+npm install
+gatsby develop
+```
+
+This will run gatsby at http://localhost:8000/
+
 ### Our Standards
 
 * We try to keep the website simple, lightweight and easy to use

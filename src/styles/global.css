@@ -1,0 +1,10 @@
+body { margin: 1em; }
+
+table {
+  border-collapse:collapse;
+  margin-top: 2em;
+}
+table td {
+  border: 1px solid #ccc;
+  padding: 1em;
+}
