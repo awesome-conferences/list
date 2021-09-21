@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import * as JsSearch from "js-search";
-import { conferences } from "../../static/conferences.yaml";
+import conferences from "../../static/conferences.yaml";
 class Search extends Component {
   state = {
-    confList: conferences,
+    confList: conferences.conferences,
     search: [],
     searchResults: [],
     isLoading: true,
@@ -87,7 +87,7 @@ class Search extends Component {
                       <td>
                         <a href={item.url}>{item.name}</a>
                       </td>
-                      <td>{item.topics}</td>
+                      <td>{item.topics.join(", ")}</td>
                       <td>
                         {item.currency} {item.price}
                       </td>
