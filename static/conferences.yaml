@@ -93,3 +93,14 @@ conferences:
   cfp_deadline: "?"
   topics:
   - QA
+- url: https://plus.qconferences.com/
+  name: QCon Plus
+  date_start: November 1
+  date_end: November 12
+  price: "700"
+  currency: EUR
+  format: online
+  cfp_deadline: "n/a"
+  topics:
+  - QA
+
