@@ -80,7 +80,7 @@ const columns = [
     title: "Name",
     dataIndex: "name",
     key: "name",
-    render: (text, record) => <a href={record.url}>{text}</a>,
+    render: (text, record) => <a href={record.url} target="_blank">{text}</a>,
     sorter: {
       compare: (a, b) => new Intl.Collator().compare(a.name, b.name),
       sortDirections: ["ascend", "descend"],
