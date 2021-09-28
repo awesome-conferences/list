@@ -8,6 +8,7 @@ conferences:
   currency: EUR
   format: online
   cfp_deadline: September 10
+  language: 'en'
   topics:
   - QA
 - url: https://techleadersummit.io
@@ -18,6 +19,7 @@ conferences:
   currency: USD
   format: online
   cfp_deadline: September 10
+  language: 'en'
   topics:
   - QA
   - Management
@@ -29,6 +31,7 @@ conferences:
   currency: EUR
   format: hybrid
   cfp_deadline: n/a
+  language: 'en'
   topics:
   - QA
   - Devops
@@ -41,6 +44,7 @@ conferences:
   currency: GBP
   format: online
   cfp_deadline: n/a
+  language: 'en'
   topics:
   - QA
 - url: https://mms.pnsqc.org/members/evr/regmenu.php?orgcode=PNSQ
@@ -51,6 +55,7 @@ conferences:
   currency: USD
   format: hybrid
   cfp_deadline: n/a
+  language: 'en'
   topics:
   - QA
 - url: https://agiletestingdays.us
@@ -61,6 +66,7 @@ conferences:
   currency: USD
   format: hybrid
   cfp_deadline: n/a
+  language: 'en'
   topics:
   - QA
 - url: https://nordictestingdays.eu/
@@ -71,6 +77,7 @@ conferences:
   currency: EUR
   format: online
   cfp_deadline: n/a
+  language: 'en'
   topics:
   - QA
 - url: https://agiledevopswest.techwell.com
@@ -81,6 +88,7 @@ conferences:
   currency: USD
   format: online
   cfp_deadline: n/a
+  language: 'en'
   topics:
   - Devops
 - url: https://romaniatesting.ro
@@ -91,6 +99,7 @@ conferences:
   currency: EUR
   format: hybrid
   cfp_deadline: "?"
+  language: 'en'
   topics:
   - QA
 - url: https://plus.qconferences.com/
@@ -101,6 +110,7 @@ conferences:
   currency: EUR
   format: online
   cfp_deadline: "n/a"
+  language: 'en'
   topics:
   - QA
 

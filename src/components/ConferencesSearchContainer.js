@@ -121,6 +121,18 @@ const columns = [
     key: "cfp_deadline",
   },
   {
+    title: "language",
+    dataIndex: "language",
+    key: "language",
+    onFilter: (value, record) => {
+      return record.format === value;
+    },
+    sorter: {
+      compare: (a, b) => new Intl.Collator().compare(a.format, b.format),
+      sortDirections: ["ascend", "descend"],
+    },
+  },
+  {
     title: "Topics",
     dataIndex: "topics",
     key: "topics",
