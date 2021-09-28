@@ -124,9 +124,7 @@ const columns = [
     title: "Price",
     dataIndex: "price",
     key: "price",
-    render: (text, record) => (
-      <span>{`${icons[record.currency].symbol}${record.price}`}</span>
-    ),
+    render: (text, record) => `${icons[record.currency].symbol}${record.price}`,
   },
   {
     title: "Format",
