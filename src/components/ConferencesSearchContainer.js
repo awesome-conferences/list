@@ -131,6 +131,7 @@ const columns = [
       compare: (a, b) => new Intl.Collator().compare(a.format, b.format),
       sortDirections: ["ascend", "descend"],
     },
+    render: (text) => text.toUpperCase(),
   },
   {
     title: "Topics",
