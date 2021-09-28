@@ -71,6 +71,10 @@ const formats = [
   ...new Set(conferences.conferences.map((item) => item.format)),
 ];
 
+const languages = [
+  ...new Set(conferences.conferences.map((item) => item.language)),
+];
+
 const columns = [
   {
     title: "Name",
@@ -132,6 +136,9 @@ const columns = [
       sortDirections: ["ascend", "descend"],
     },
     render: (text) => text.toUpperCase(),
+    filters: languages.map((it) => {
+      return { text: it, value: it };
+    }),
   },
   {
     title: "Topics",
