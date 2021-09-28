@@ -4,8 +4,10 @@ import icons from "currency-icons";
 import * as JsSearch from "js-search";
 import React, { Component } from "react";
 import conferences from "../../static/conferences.yaml";
+import moment from "moment";
 
 const { Header, Content } = Layout;
+
 const randomColor = (string) => {
   var sanitized = string.replace(/[^A-Za-z]/, "");
   var letters = sanitized.split("");
@@ -80,7 +82,11 @@ const columns = [
     title: "Name",
     dataIndex: "name",
     key: "name",
-    render: (text, record) => <a href={record.url} target="_blank">{text}</a>,
+    render: (text, record) => (
+      <a href={record.url} target="_blank" rel="noreferrer">
+        {text}
+      </a>
+    ),
     sorter: {
       compare: (a, b) => new Intl.Collator().compare(a.name, b.name),
       sortDirections: ["ascend", "descend"],
@@ -90,11 +96,29 @@ const columns = [
     title: "Start date",
     dataIndex: "date_start",
     key: "date_start",
+    render: (text) => moment(text).format("yyyy-MM-DD"),
+    sorter: {
+      compare: (a, b) => {
+        const x = moment(a.date_start);
+        const y = moment(b.date_start);
+        return (x < y) - (y < x);
+      },
+      sortDirections: ["ascend", "descend"],
+    },
   },
   {
     title: "End date",
     dataIndex: "date_end",
     key: "date_end",
+    render: (text) => moment(text).format("yyyy-MM-DD"),
+    sorter: {
+      compare: (a, b) => {
+        const x = moment(a.date_start);
+        const y = moment(b.date_start);
+        return (x < y) - (y < x);
+      },
+      sortDirections: ["ascend", "descend"],
+    },
   },
   {
     title: "Price",
@@ -123,6 +147,7 @@ const columns = [
     title: "CFP deadline",
     dataIndex: "cfp_deadline",
     key: "cfp_deadline",
+    render: (text) => (text ? moment(text).format("yyyy-MM-DD") : "n/a"),
   },
   {
     title: "language",
