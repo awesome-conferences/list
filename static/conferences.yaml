@@ -106,3 +106,25 @@ conferences:
   language: 'en'
   topics:
   - QA
+- url:https://devopscon.io/london/
+  name: DevOpsCon London Hybrid 2022
+  date_start: "2022-04-27"
+  date_end: "2022-04-28"
+  price: "692"
+  currency: GBP
+  format: hybrid
+  cfp_deadline: "2021-11-08"
+  language: 'en'
+  topics:
+  - DEVOPS
+  - url:https://www.developerweek.com
+  name: Developer Week 2021
+  date_start: "2022-02-02"
+  date_end: "2022-02-09"
+  price: "545"
+  currency: USD
+  format: hybrid
+  cfp_deadline: "2021-10-29"
+  language: 'en'
+  topics:
+  - API & Microservices, AI & ML, DevLead, DEVOPS, CLOUD, Javascript, Kubernetes
