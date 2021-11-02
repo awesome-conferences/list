@@ -106,6 +106,18 @@ conferences:
   language: 'en'
   topics:
   - QA
+- url: https://dartup.ru/EN/
+  name: DartUP
+  date_start: "2021-12-03"
+  date_end: "2021-12-04"
+  price: n/a
+  currency: EUR
+  format: online
+  cfp_deadline: "2021-12-06"
+  language: 'en/ru'
+  topics:
+  - Dart
+  - Flutter
 - url:https://devopscon.io/london/
   name: DevOpsCon London Hybrid 2022
   date_start: "2022-04-27"
