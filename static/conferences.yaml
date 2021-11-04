@@ -118,7 +118,7 @@ conferences:
   topics:
   - Dart
   - Flutter
-- url:https://devopscon.io/london/
+- url: https://devopscon.io/london/
   name: DevOpsCon London Hybrid 2022
   date_start: "2022-04-27"
   date_end: "2022-04-28"
@@ -129,7 +129,7 @@ conferences:
   language: 'en'
   topics:
   - DEVOPS
-  - url:https://www.developerweek.com
+- url: https://www.developerweek.com
   name: Developer Week 2021
   date_start: "2022-02-02"
   date_end: "2022-02-09"
