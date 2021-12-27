@@ -1,0 +1,142 @@
+---
+conferences:
+- url: https://agiletestingdays.com/
+  name: Agile Testing Days
+  date_start: "2021-11-10"
+  date_end: "2021-11-10"
+  price: '180'
+  currency: EUR
+  format: online
+  cfp_deadline: "2021-09-10"
+  language: 'en'
+  topics:
+  - QA
+- url: https://techleadersummit.io
+  name: Tech Leader Summit
+  date_start: "2021-12-08"
+  date_end: "2021-12-10"
+  price: '3000'
+  currency: USD
+  format: online
+  cfp_deadline: "2021-09-10"
+  language: 'en'
+  topics:
+  - QA
+  - Management
+- url: https://devopscon.io/munich
+  name: Devops Con Munich
+  date_start: "2021-11-29"
+  date_end: "2021-12-02"
+  price: '950'
+  currency: EUR
+  format: hybrid
+  language: 'en'
+  topics:
+  - QA
+  - Devops
+  - Management
+- url: https://www.ministryoftesting.com/membership
+  name: Ministry of testing workshops
+  date_start: "2021-09-27"
+  date_end: "2021-09-27"
+  price: '27'
+  currency: GBP
+  format: online
+  language: 'en'
+  topics:
+  - QA
+- url: https://mms.pnsqc.org/members/evr/regmenu.php?orgcode=PNSQ
+  name: Pacific NW Software Quality Conference
+  date_start: "2021-11-10"
+  date_end: "2021-11-13"
+  price: '400'
+  currency: USD
+  format: hybrid
+  language: 'en'
+  topics:
+  - QA
+- url: https://agiletestingdays.us
+  name: Agile Testing Days US
+  date_start: "2021-06-05"
+  date_end: "2021-06-09"
+  price: n/a
+  currency: USD
+  format: hybrid
+  cfp_deadline: n/a
+  language: 'en'
+  topics:
+  - QA
+- url: https://nordictestingdays.eu/
+  name: Nordic Testing Days
+  date_start: "2021-06-04"
+  date_end: "2021-06-04"
+  price: '100'
+  currency: EUR
+  format: online
+  language: 'en'
+  topics:
+  - QA
+- url: https://agiledevopswest.techwell.com
+  name: Agile Devops West
+  date_start: "2021-06-11"
+  date_end: "2021-06-11"
+  price: "?"
+  currency: USD
+  format: online
+  language: 'en'
+  topics:
+  - Devops
+- url: https://romaniatesting.ro
+  name: Romanian Testing Conference
+  date_start: "2021-06-09"
+  date_end: "2021-06-10"
+  price: "?"
+  currency: EUR
+  format: hybrid
+  language: 'en'
+  topics:
+  - QA
+- url: https://plus.qconferences.com/
+  name: QCon Plus
+  date_start: "2021-11-01"
+  date_end: "2021-11-12"
+  price: "700"
+  currency: EUR
+  format: online
+  language: 'en'
+  topics:
+  - QA
+- url: https://dartup.ru/EN/
+  name: DartUP
+  date_start: "2021-12-03"
+  date_end: "2021-12-04"
+  price: n/a
+  currency: EUR
+  format: online
+  cfp_deadline: "2021-12-06"
+  language: 'en/ru'
+  topics:
+  - Dart
+  - Flutter
+- url: https://devopscon.io/london/
+  name: DevOpsCon London Hybrid 2022
+  date_start: "2022-04-27"
+  date_end: "2022-04-28"
+  price: "692"
+  currency: GBP
+  format: hybrid
+  cfp_deadline: "2021-11-08"
+  language: 'en'
+  topics:
+  - DEVOPS
+- url: https://www.developerweek.com
+  name: Developer Week 2021
+  date_start: "2022-02-02"
+  date_end: "2022-02-09"
+  price: "545"
+  currency: USD
+  format: hybrid
+  cfp_deadline: "2021-10-29"
+  language: 'en'
+  topics:
+  - API & Microservices, AI & ML, DevLead, DEVOPS, CLOUD, Javascript, Kubernetes
