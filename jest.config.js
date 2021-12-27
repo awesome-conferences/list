@@ -19,7 +19,7 @@ module.exports = {
     [
       'jest-qase-reporter',
       {
-//        apiToken: '46aac0a5e10a1a33c9ddb0cc52ab36337bc558b3',
+        apiToken: '46aac0a5e10a1a33c9ddb0cc52ab36337bc558b3',
         projectCode: 'awesomecl',
 //        runId: 45,
 //        environmentId: 1,

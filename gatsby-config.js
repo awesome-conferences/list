@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://awesome-conferences.github.io/list/",
+    siteUrl: "https://awesome-conferences.github.io",
     title: "Conferences",
   },
   plugins: [
